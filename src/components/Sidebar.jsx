@@ -8,13 +8,11 @@ function Sidebar() {
     <div className={styles.sidebar}>
       <Logo />
       <AppNav />
-
-      {/* Outlet is used to display components of rested routes */}
+      {/* Outlet is used to display components of rested routes. The cities component will be render as default component when user goes to /app */}
       <Outlet />
-
       <footer className={styles.footer}>
         <p className={styles.copyright}>
-          &copy; Copyright {new Date().getFullYear} by WorldWise Inc.
+          &copy; Copyright {new Date().getFullYear()} by WorldWise Inc.
         </p>
       </footer>
     </div>

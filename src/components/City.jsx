@@ -1,23 +1,30 @@
-import styles from "./City.module.css";
+import { useParams, useSearchParams } from 'react-router-dom';
+import styles from './City.module.css';
+import { useCities } from '../context/CitiesContext';
+import { useEffect } from 'react';
+import Spinner from './Spinner';
+import BackButton from './BackButton';
 
 const formatDate = (date) =>
-  new Intl.DateTimeFormat("en", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    weekday: "long",
+  new Intl.DateTimeFormat('en', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    weekday: 'long',
   }).format(new Date(date));
 
 function City() {
-  // TEMP DATA
-  const currentCity = {
-    cityName: "Lisbon",
-    emoji: "🇵🇹",
-    date: "2027-10-31T15:59:59.138Z",
-    notes: "My favorite city so far!",
-  };
+  // id from params url
+  const { id } = useParams();
+  const { currentCity, getCity, isLoading } = useCities();
 
   const { cityName, emoji, date, notes } = currentCity;
+
+  useEffect(() => {
+    getCity(id);
+  }, [id]);
+
+  if (isLoading) return <Spinner />;
 
   return (
     <div className={styles.city}>
@@ -44,15 +51,14 @@ function City() {
         <h6>Learn more</h6>
         <a
           href={`https://en.wikipedia.org/wiki/${cityName}`}
-          target="_blank"
-          rel="noreferrer"
-        >
+          target='_blank'
+          rel='noreferrer'>
           Check out {cityName} on Wikipedia &rarr;
         </a>
       </div>
 
       <div>
-        <ButtonBack />
+        <BackButton />
       </div>
     </div>
   );

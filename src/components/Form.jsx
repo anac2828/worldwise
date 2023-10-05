@@ -51,7 +51,6 @@ function Form() {
         // state
         setIsLoadingGeocoding(true);
         setError('');
-
         const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`);
         const data = await res.json();
 
@@ -90,7 +89,8 @@ function Form() {
 
     // Sends a POST request to create a city. CitiesContext function (useCities)
     await createCity(newCity);
-    // react-dom import
+
+    // react-dom import this will reload the cities component and will display the new city
     navigate('/app/cities');
   }
 

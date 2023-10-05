@@ -13,6 +13,7 @@ const formatDate = (date) =>
     weekday: 'long',
   }).format(new Date(date));
 
+// Component render when user clicks on one of the listed cities. Component at "App.jsx".
 function City() {
   // id from params url
   const { id } = useParams();

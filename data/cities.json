@@ -35,6 +35,126 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Escaro",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-10-05T03:46:19.690Z",
+      "notes": "test",
+      "position": {
+        "lat": "42.52069952914966",
+        "lng": "2.3071289062500004"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Escaro",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-10-05T03:46:19.690Z",
+      "notes": "test",
+      "position": {
+        "lat": "42.52069952914966",
+        "lng": "2.3071289062500004"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Escaro",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-10-05T03:46:59.604Z",
+      "notes": "test",
+      "position": {
+        "lat": "42.52069952914966",
+        "lng": "2.3071289062500004"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Escaro",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-10-05T03:49:58.708Z",
+      "notes": "test",
+      "position": {
+        "lat": "42.52069952914966",
+        "lng": "2.3071289062500004"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Escaro",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-10-05T03:51:14.192Z",
+      "notes": "test",
+      "position": {
+        "lat": "42.52069952914966",
+        "lng": "2.3071289062500004"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Rome",
+      "country": "Italy",
+      "emoji": "🇮🇹",
+      "date": "2023-10-05T03:57:11.230Z",
+      "notes": "test",
+      "position": {
+        "lat": "41.89205502378826",
+        "lng": "12.485961914062502"
+      },
+      "id": 98443203
+    },
+    {
+      "cityName": "Caceres",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-10-05T04:45:57.342Z",
+      "notes": "",
+      "position": {
+        "lat": "39.38526381099774",
+        "lng": "-6.613769531250001"
+      },
+      "id": 98443204
+    },
+    {
+      "cityName": "San Clemente",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-10-05T04:45:57.342Z",
+      "notes": "",
+      "position": {
+        "lat": "39.35129035526705",
+        "lng": "-2.5048828125000004"
+      },
+      "id": 98443205
+    },
+    {
+      "cityName": "Za’roura",
+      "country": "Morocco",
+      "emoji": "🇲🇦",
+      "date": "2023-10-05T04:45:57.342Z",
+      "notes": "",
+      "position": {
+        "lat": "35.33529320309331",
+        "lng": "-5.690917968750001"
+      },
+      "id": 98443206
+    },
+    {
+      "cityName": "Courtepin",
+      "country": "Switzerland",
+      "emoji": "🇨🇭",
+      "date": "2023-10-05T04:45:57.342Z",
+      "notes": "",
+      "position": {
+        "lat": "46.882723010671945",
+        "lng": "7.075195312500001"
+      },
+      "id": 98443207
     }
   ]
 }

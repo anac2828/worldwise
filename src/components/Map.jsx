@@ -30,7 +30,7 @@ function Map() {
     getPosition,
   } = useGeolocation();
   const [mapLat, mapLng] = useURLPosition();
-  console.log(mapLat, mapLng);
+
   // we need use Effect to keep current city on map when the lists of cities is displayed. "mapPosition" will change when the user clicks on a city from the list using the location state in the URL.
   // useEffect is monstly a syncronizaiton system
   useEffect(() => {

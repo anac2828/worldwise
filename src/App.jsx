@@ -14,6 +14,7 @@ import Form from './components/Form';
 
 import { CitiesProvider } from './context/CitiesContext';
 import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './pages/ProtectedRoute';
 
 function App() {
   return (
@@ -29,7 +30,13 @@ function App() {
               <Route path='login' element={<Login />} />
 
               {/* APP ROUTE */}
-              <Route path='app' element={<AppLayout />}>
+              <Route
+                path='app'
+                element={
+                  <ProtectedRoute>
+                    <AppLayout />
+                  </ProtectedRoute>
+                }>
                 {/* NESTED ROUTES (CHIELD ROUTES) */}
                 {/* Default element that will be displayed on the app page */}
                 {/* The navigate component acts as a "redirect", "replace" will take you back to the previous screen when the back arrow in the browser is click*/}

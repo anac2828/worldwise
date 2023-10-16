@@ -1,4 +1,9 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import { lazy } from 'react';
 
 // import Product from './pages/Product';
@@ -51,7 +56,10 @@ function App() {
                   {/* NESTED ROUTES (CHIELD ROUTES) */}
                   {/* Default element that will be displayed on the app page */}
                   {/* The navigate component acts as a "redirect", "replace" will take you back to the previous screen when the back arrow in the browser is click*/}
-                  <Route index element={<Navigate replace to='cities' />} />
+                  <Route
+                    index
+                    element={<Navigate replace to='cities' />}
+                  />
                   <Route path='cities' element={<CityList />} />
                   {/* This route will display details about a specific city when it is clicked from the cities list */}
                   <Route path='cities/:id' element={<City />} />

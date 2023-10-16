@@ -47,7 +47,7 @@ function AuthProvider({ children }) {
   );
 }
 
-// custom hook to consume context
+// custom hook to consume context that will give us access to the provider value property
 
 function useAuth() {
   const context = useContext(AuthContext);

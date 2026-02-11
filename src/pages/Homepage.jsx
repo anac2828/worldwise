@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import PageNav from '../components/PageNav';
+import { Link } from 'react-router-dom'
+import PageNav from '../components/PageNav'
 
-import styles from './Homepage.module.css';
+import styles from './Homepage.module.css'
 
 export default function Homepage() {
   return (
@@ -23,5 +23,5 @@ export default function Homepage() {
         </Link>
       </section>
     </main>
-  );
+  )
 }

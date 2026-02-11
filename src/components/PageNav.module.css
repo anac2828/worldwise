@@ -21,6 +21,7 @@
 }
 
 /* CSS Modules feature */
+/*The active class is provided by React Router. To style the class use the global function  */
 .nav a:global(.active) {
   color: var(--color-brand--2);
 }

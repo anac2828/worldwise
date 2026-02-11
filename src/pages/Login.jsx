@@ -1,30 +1,33 @@
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/AuthContext'
 
-import PageNav from '../components/PageNav';
-import styles from './Login.module.css';
-import Button from '../components/Button';
+import PageNav from '../components/PageNav'
+import styles from './Login.module.css'
+import Button from '../components/Button'
 
 export default function Login() {
-  const navigate = useNavigate();
-  const { login, isAuthenticated } = useAuth();
+  const navigate = useNavigate()
+  const { login, isAuthenticated } = useAuth()
 
   // PRE-FILL FOR DEV PURPOSES
-  const [email, setEmail] = useState('jack@example.com');
-  const [password, setPassword] = useState('qwerty');
+  const [email, setEmail] = useState('jack@example.com')
+  const [password, setPassword] = useState('qwerty')
 
   function handleOnSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
 
-    if (email && password) login(email, password);
+    // Checks if the email and password are correct. If so, isAuthenticated will return true
+    if (email && password) login(email, password)
   }
 
+  // On first render isAuthenticated will be false. When the login form is submitted, isAuthencitated will change to true
+  // useEffect will run when isAuthenticated changes and the Login component will re-render
   useEffect(() => {
-    // use "replace: true"
-    if (isAuthenticated) navigate('/app', { replace: true });
-  }, [isAuthenticated, navigate]);
+    //If true go to '/app'. Use replace: true to avoid going back to the login page once a user is logged in and avoid a bug.
+    if (isAuthenticated) navigate('/app', { replace: true })
+  }, [isAuthenticated, navigate])
 
   return (
     <main className={styles.login}>
@@ -55,5 +58,5 @@ export default function Login() {
         </div>
       </form>
     </main>
-  );
+  )
 }

@@ -47,6 +47,42 @@
         "lng": "-43.209228515625"
       },
       "id": 98443199
+    },
+    {
+      "cityName": "Lake Isabella",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2026-02-03T23:18:57.400Z",
+      "notes": "",
+      "position": {
+        "lat": "35.60371874069731",
+        "lng": "-118.89404296875001"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Villamayor de Santiago",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2026-02-06T05:05:45.075Z",
+      "notes": "",
+      "position": {
+        "lat": "39.690280594818034",
+        "lng": "-2.96630859375"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Brikcha",
+      "country": "Morocco",
+      "emoji": "🇲🇦",
+      "date": "2026-02-09T22:29:06.223Z",
+      "notes": "",
+      "position": {
+        "lat": "35.0120020431607",
+        "lng": "-5.625"
+      },
+      "id": 98443202
     }
   ]
 }

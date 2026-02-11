@@ -1,7 +1,8 @@
-import { NavLink } from 'react-router-dom';
-import styles from './PageNav.module.css';
-import Logo from './Logo';
+import { NavLink } from 'react-router-dom'
+import styles from './PageNav.module.css'
+import Logo from './Logo'
 
+// NavLink will let you hightligth the current page you are on unlike Link
 function PageNav() {
   return (
     <div>
@@ -22,7 +23,7 @@ function PageNav() {
         </ul>
       </nav>
     </div>
-  );
+  )
 }
 
-export default PageNav;
+export default PageNav

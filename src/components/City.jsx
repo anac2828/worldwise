@@ -1,9 +1,9 @@
-import { useParams } from 'react-router-dom';
-import styles from './City.module.css';
-import { useCities } from '../context/CitiesContext';
-import { useEffect } from 'react';
-import Spinner from './Spinner';
-import BackButton from './BackButton';
+import { useParams } from 'react-router-dom'
+import styles from './City.module.css'
+import { useCities } from '../context/CitiesContext'
+import { useEffect } from 'react'
+import Spinner from './Spinner'
+import BackButton from './BackButton'
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat('en', {
@@ -11,21 +11,24 @@ const formatDate = (date) =>
     month: 'long',
     year: 'numeric',
     weekday: 'long',
-  }).format(new Date(date));
+  }).format(new Date(date))
 
-// Component render when user clicks on one of the listed cities. Component at "App.jsx".
+// Component is render when user clicks on one of the listed cities in /app/cities (CityItem component).
 function City() {
   // id from params url
-  const { id } = useParams();
-  const { currentCity, getCity, isLoading } = useCities();
+  const { id } = useParams()
+  const { currentCity, getCity, isLoading } = useCities()
+  const { cityName, emoji, date, notes } = currentCity
 
-  const { cityName, emoji, date, notes } = currentCity;
-
+  // Will run if the id changes and the city component renders the new city data
+  // getCity is wrapped in useCallback (see CitiesContext) to prevent an infinite loop of useEffect because getCity is a dependency of useEffect and getCity changes on every render without useCallback. With useCallback, getCity will only change if the currentCity.id changes.
   useEffect(() => {
-    getCity(id);
-  }, [id, getCity]);
+    // After the component mounts the getCity() will be called and the currentCity data will be updated
+    getCity(id)
+  }, [id, getCity])
 
-  if (isLoading) return <Spinner />;
+  // This must come after the useEffect
+  if (isLoading) return <Spinner />
 
   return (
     <div className={styles.city}>
@@ -53,7 +56,8 @@ function City() {
         <a
           href={`https://en.wikipedia.org/wiki/${cityName}`}
           target='_blank'
-          rel='noreferrer'>
+          rel='noreferrer'
+        >
           Check out {cityName} on Wikipedia &rarr;
         </a>
       </div>
@@ -62,7 +66,7 @@ function City() {
         <BackButton />
       </div>
     </div>
-  );
+  )
 }
 
-export default City;
+export default City
